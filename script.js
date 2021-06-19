@@ -3,19 +3,15 @@ function computerPlay() {
     switch(randomNum()) {
         case 0: 
             answer = "rock";
-            return answer
-        break;
+            break;
         case 1:
             answer = "scissors";
-            return answer
             break;
         case 2:
             answer = "paper";
-            return answer
             break;
     }
-    
-
+    return answer
 }
 function randomNum() {{
     randomNumber = Math.floor((Math.random() * 3));
@@ -23,10 +19,29 @@ function randomNum() {{
 }}
 
 function playRound(playerSelection, computerSelection) {
-    let playerSelection = prompt("Choose rock, paper, or scissors", "");
-    
+ console.log(computerSelection);
     
 }
 
-console.log(playRound())
+
+playRound(prompt("Choose rock, paper, or scissors", ""), computerPlay());
 //console.log(computerPlay())
+
+/*
+  console.log("Player chose: " +playerSelection+ " & computer chose: " + computerSelection);
+
+    // Make sure player input is R/P/S and nothing else
+    if (playerSelection.toLowerCase() !== 'rock' || playerSelection.toLowerCase() !== 'paper' || playerSelection.toLowerCase() !== 'scissors' ) {
+        badString = 'That is an unexpected response'
+        console.log(badString)
+        //return playerSelection
+    } else {
+        if (playerSelection === computerSelection) {
+          tie = 'This match is a tie';
+          console.log(tie);
+          return tie
+        } else {
+            console.log("nice");
+        }
+
+*/
