@@ -22,16 +22,17 @@ function playRound(playerSelection, computerSelection) {
  console.log("This is the computer choice: " +computerSelection);
  console.log("This is the player choice: " + playerSelection);
 // Make the player choice case insensitive (ROCk, rOcK, rocK, etc)
-
+    playerSelection = playerSelection.toLowerCase();
 
  // Compare the two choices
  if (playerSelection === computerSelection) {
      tie = "It's a tie!"
      console.log(tie)
  } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper") {
-    console.log("User wins!");
- } 
-
+    console.log(`User wins! ${playerSelection} beats ${computerSelection}`);
+ } else {
+     console.log(`Computer wins! ${computerSelection} beats ${playerSelection}`);
+ }
     
 }
 
