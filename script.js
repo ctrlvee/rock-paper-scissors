@@ -22,39 +22,50 @@ function playRound(playerSelection, computerSelection) {
  console.log("This is the computer choice: " +computerSelection);
  console.log("This is the player choice: " + playerSelection);
 // Make the player choice case insensitive (ROCk, rOcK, rocK, etc)
-    playerSelection = playerSelection.toLowerCase();
+ playerSelection = playerSelection.toLowerCase();
 
  // Compare the two choices
  if (playerSelection === computerSelection) {
-     tie = "It's a tie!"
+     const tie = "It's a tie!"
      console.log(tie)
+     return tie;
  } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper") {
     console.log(`User wins! ${playerSelection} beats ${computerSelection}`);
+    const userWin = "User Wins";
+    return userWin;
  } else {
      console.log(`Computer wins! ${computerSelection} beats ${playerSelection}`);
+     const compWin = "Computer Wins";
+     return compWin;
  }
-    
+
+
+}
+const computerSelection = computerPlay();
+console.log(playRound(prompt("Choose rock, paper, or scissors", ""), computerSelection));
+/*
+function game() {
+    let gameRound = 1;
+    let userCount = 0;
+    let compCount = 0;
+
+    while (gameRound !== 5) {
+        gameRound += 1;
+        let result = playRound(prompt("Choose rock, paper, or scissors", ""), computerSelection);
+
+        switch (result) {
+            case compWin:
+                compCount += 1;
+                break;
+            case userWin:
+                userCount += 1;
+                break
+        }
+        
+    }
+
+
 }
 
-
-playRound(prompt("Choose rock, paper, or scissors", ""), computerPlay());
-//console.log(computerPlay())
-
-/*
-  console.log("Player chose: " +playerSelection+ " & computer chose: " + computerSelection);
-
-    // Make sure player input is R/P/S and nothing else
-    if (playerSelection.toLowerCase() !== 'rock' || playerSelection.toLowerCase() !== 'paper' || playerSelection.toLowerCase() !== 'scissors' ) {
-        badString = 'That is an unexpected response'
-        console.log(badString)
-        //return playerSelection
-    } else {
-        if (playerSelection === computerSelection) {
-          tie = 'This match is a tie';
-          console.log(tie);
-          return tie
-        } else {
-            console.log("nice");
-        }
-
+game();
 */
