@@ -20,44 +20,73 @@ body {
 
 }
 .player-box-container { 
-    
+    display: grid;
+    grid-template-areas: 'playerName btn'
+                        'winCount btn';
+
     position: absolute;
     left: 0px;
     top:0px;
-    width: 30%;
+    width: 20%;
+    height: 10%;
     border-style: dotted;
-    border-width: 1px;
-    background-color: red;
+    background-color: rgba(255, 255, 255, .7);
 }
+.player-title {
+    grid-area: playerName;
+    font-size: 1em;
+
+    position: relative;
+    border-style: dotted;
+
+}
+.winCount {
+    grid-area: winCount;
+    border-style: dotted;
+}
+.userChoice {
+    grid-area: btn;
+    border-style: dotted;
+}
+
+
 .cpu-box-container {
+    
+
     position: absolute;
     right:0px;
     bottom:0px;
-    width: 30%;
+    height: 10%;
+    width: 20%;
     border-style: dotted;
-    border-width: 1px;
+ 
     background-color: yellow;
 }
 .result-container {
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
     margin: auto;
     width: 70%;
-    height: 50%;
+    height: 10%;
     border-style: dotted;
-    border-width: 1px;
     background-color: green;
 }
 .animation-container {
     
- 
+   
     
     position: absolute;
     top: 20%;
    
     
     height: 60%;
-    width: 70%;
+    width: 55%;
+    max-width: 60%;
     border-style: dotted;
-    border-width: 1px;
+   
     background-color: blue;
     
 }
