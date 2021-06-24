@@ -7,8 +7,11 @@ html {
     min-height: 100%;
 }
 body {
-    background-color: rgba(0, 0, 0, .3);
+    background-image: url('/Images/background.jpg');
     
+}
+p, h4 {
+    font-family: 'Indie Flower', cursive;
 }
 
 .page-container {
@@ -48,8 +51,28 @@ body {
     grid-area: btn;
     border-style: dotted;
 }
+/*
+.dropup {
+    
+    position:relative;
+   
+    display: none;
 
+}
 
+.dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropup-content a {
+    text-decoration: none;
+    display: none;
+}
+
+ */
 .cpu-box-container {
     
 
@@ -71,8 +94,9 @@ body {
     margin: auto;
     width: 70%;
     height: 10%;
-    border-style: dotted;
+   /* border-style: dotted;
     background-color: green;
+    */
 }
 .animation-container {
     
@@ -85,8 +109,10 @@ body {
     height: 60%;
     width: 55%;
     max-width: 60%;
+    /*
     border-style: dotted;
    
-    background-color: blue;
+    background-color: white;
+    */
     
 }
