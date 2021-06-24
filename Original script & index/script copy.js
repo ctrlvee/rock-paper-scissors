@@ -18,6 +18,10 @@ function randomNum() {{
     return randomNumber
 }}
 
+//function resetRound() [
+ //   playerSelection = '';
+ //   
+//]
 
 function playRound(playerSelection, computerSelection) {
 // Make the player choice case insensitive (ROCk, rOcK, rocK, etc)

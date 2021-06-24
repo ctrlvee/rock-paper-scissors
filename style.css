@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding:0;
+}
+html {
+    min-width: 100%;
+    min-height: 100%;
+}
+body {
+    background-color: rgba(0, 0, 0, .3);
+    
+}
+
+.page-container {
+     t
+}
+.player-box-container {
+    
+    position: absolute;
+    left: 0;
+    top:0px;
+    width: 30%;
+    border-style: dotted;
+    border-width: 1px;
+    background-color: red;
+}
+.cpu-box-container {
+    position: absolute;
+    right:1px;
+    bottom:0px;
+    width: 30%;
+    border-style: dotted;
+    border-width: 1px;
+    background-color: yellow;
+}
+.result-container {
+    margin: auto;
+    width: 70%;
+    border-style: dotted;
+    border-width: 1px;
+    background-color: green;
+}
+.animation-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+    
+    
+    width: 50%;
+    border-style: dotted;
+    border-width: 1px;
+    background-color: blue;;
+}
