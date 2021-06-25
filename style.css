@@ -26,6 +26,8 @@ p, h4 {
     display: grid;
     grid-template-areas: 'playerName btn'
                         'winCount btn';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
     position: absolute;
     left: 0px;
@@ -39,33 +41,47 @@ p, h4 {
     grid-area: playerName;
     font-size: 1em;
     margin: auto;
+    margin-left:10%;
     position: relative;
     border-style: dotted;
 
 }
 .winCount {
     margin: auto;
+    margin-left: 10%;
     grid-area: winCount;
     border-style: dotted;
 }
 .userChoice {
+    display: flex;
+
     margin: auto;
+    
     grid-area: btn;
     border-style: dotted;
+    position: absolute;
 }
 
 .dropup {
-    position: relative;
+    position: absolute;
     display:flex;
+    
+    margin: auto;
+
+
 }
 .dropup-content {
     
-    display: flex;
-    position: absolute;
+    display: none;
+    position: relative;
+   
     z-index: 1;
+    
+   
 }
 .dropup-content a {
     display: flex;
+
     
     
 }
@@ -75,6 +91,8 @@ p, h4 {
 }
 .rock-icon  {
     max-width: 4em;
+    position: relative;
+    
 }
 img {
     max-width: 4em;
