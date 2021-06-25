@@ -60,27 +60,23 @@ p, h4 {
 }
 .dropup-content {
     
-    display: none;
+    display: flex;
     position: absolute;
     z-index: 1;
 }
 .dropup-content a {
     display: flex;
     
+    
 }
 .dropup:hover .dropup-content {
     display: flex;
     
 }
-.rock-icon {
+.rock-icon  {
     max-width: 4em;
 }
-.scissor-icon {
-    display: flex;
-    
-    max-width: 4em;
-}
-.paper-icon {
+img {
     max-width: 4em;
 }
 /*
