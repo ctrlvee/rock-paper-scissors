@@ -41,14 +41,13 @@ p, h4 {
     grid-area: playerName;
     font-size: 1em;
     margin: auto;
-    margin-left:10%;
+    
     position: relative;
     border-style: dotted;
 
 }
 .winCount {
     margin: auto;
-    margin-left: 10%;
     grid-area: winCount;
     border-style: dotted;
 }
@@ -89,13 +88,18 @@ p, h4 {
     display: flex;
     
 }
-.rock-icon  {
+/*.rock-icon  {
     max-width: 4em;
     position: relative;
     
 }
+*/
 img {
-    max-width: 4em;
+    margin: auto;
+    height: auto;
+    width:auto;
+    max-width:3.5em;
+    border-style: dotted;
 }
 /*
 .dropup {
@@ -137,21 +141,22 @@ img {
     grid-area: cpu-title;
     font-size: 1em;
     margin: auto;
-    margin-left: 10%;
+    
     position: relative;
-    border-style: dotted;
+    
    
 }
 .cpuChoice {
     grid-area: cpuChoice;
     border-style: dotted;
-    
+    margin: auto;
+
 }
 .cpuWinCount {
     grid-area: cpuWinCount;
-    border-style: dotted;
+    
     margin: auto;
-    margin-left: 10%;
+   
     
 }
 .result-container {
