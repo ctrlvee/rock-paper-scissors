@@ -31,25 +31,57 @@ p, h4 {
     left: 0px;
     top:0px;
     width: 20%;
-    height: 10%;
+    min-height: 13%;
     border-style: dotted;
     background-color: rgba(255, 255, 255, .7);
 }
 .player-title {
     grid-area: playerName;
     font-size: 1em;
-
+    margin: auto;
     position: relative;
     border-style: dotted;
 
 }
 .winCount {
+    margin: auto;
     grid-area: winCount;
     border-style: dotted;
 }
 .userChoice {
+    margin: auto;
     grid-area: btn;
     border-style: dotted;
+}
+
+.dropup {
+    position: relative;
+    display:flex;
+}
+.dropup-content {
+    
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.dropup-content a {
+    display: flex;
+    
+}
+.dropup:hover .dropup-content {
+    display: flex;
+    
+}
+.rock-icon {
+    max-width: 4em;
+}
+.scissor-icon {
+    display: flex;
+    
+    max-width: 4em;
+}
+.paper-icon {
+    max-width: 4em;
 }
 /*
 .dropup {
