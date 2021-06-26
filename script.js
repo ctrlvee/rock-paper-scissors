@@ -1,5 +1,6 @@
 let compCount = 0;
 let playerCount = 0;
+let playerSelection = '';
 
 
 function checkGame() {
@@ -8,7 +9,27 @@ function checkGame() {
     } else if (playerCount === 5) {
         console.log("The user won 5 rounds");
     }
+    changeResultContainer();
     
+}
+function changeResultContainer () 
+{
+    const container = document.querySelector('.result-container');
+    const content = document.createElement('h4');
+    content.classList.add('content');
+
+    if (compCount ===5) {
+        content.textContent = 'Computer Wins!';
+        container.appendChild(content);
+    } else if (compCount ===5) {
+        content.textContent = 'Player Wins!';
+        container.appendChild(content);
+    } else {
+        return
+    }
+    
+    
+   
 }
 function addPoints(whoWon) {
     if (whoWon === "Computer Wins") {
@@ -41,11 +62,16 @@ function randomNum() {{
 }}
 
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
 // Make the player choice case insensitive (ROCk, rOcK, rocK, etc)
-      
+    checkGame()
+
+    computerSelection = computerPlay();
+    console.log(computerSelection);
+    console.log(playerSelection);
+
   // Check if user input is valid
-  // Compare the two choices
+  // Compare the two choicess
     if (playerSelection === computerSelection) {
         const tie = "It's a tie!";
         console.log(tie);
@@ -68,38 +94,41 @@ function playRound(playerSelection, computerSelection) {
         console.log("Your input is invalid");
     }   
 }
- 
+/* 
 function playGame() {
     
-
-    playRound()
-}
+    for (let i=0; i<=5; i+=1) {
+        playRound()
+    }
+    
+} */
 
 function askIfPlay () {
-    window.confirm("Do you want to play the game?"):
-    if (confirm("Yes"))
+    
+    if (confirm("Do you want to play the game?")) {
+        alert("Select your hand at the top left");
+    } else {
+        console.log('noo');
+        
+    }
 
 }
+askIfPlay();
 
-
-/// Dealing with buttons
-// Run game with rock as playerChoice
 document.getElementById('rock-btn').addEventListener("click", function() {
-    
-    playRound('rock', computerPlay());
-
+    playerSelection = 'rock';
+    playRound();
 });
-
 document.getElementById('paper-btn').addEventListener("click", function() {
-    
-    playRound('paper', computerPlay());
-
+    playerSelection = 'paper';
+    playRound();
 });
 document.getElementById('scissors-btn').addEventListener("click", function() {
-    
-    playRound('scissors', computerPlay());
-
+    playerSelection = 'scissors';
+    playRound();
 });
+
+
 
 /* Plays 5 rounds
 playRound((prompt("Choose rock, paper, or scissors", "")).toLowerCase(), computerPlay());
