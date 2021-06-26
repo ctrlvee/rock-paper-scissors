@@ -3,6 +3,19 @@ let playerCount = 0;
 let playerSelection = '';
 
 
+
+const winCountValue = document.querySelector(".winCountValue");
+const value = document.createElement('p');
+value.classList.add('value');
+value.textContent = `${playerCount}`
+winCountValue.appendChild(value);
+
+function updateScore() {
+    value.textContent = `${playerCount}`
+    winCountValue.appendChild(value);
+}
+
+
 function checkGame() {
     if (compCount === 5){
         console.log("The computer won 5 rounds");
@@ -21,7 +34,7 @@ function changeResultContainer ()
     if (compCount ===5) {
         content.textContent = 'Computer Wins!';
         container.appendChild(content);
-    } else if (compCount ===5) {
+    } else if (playerCount ===5) {
         content.textContent = 'Player Wins!';
         container.appendChild(content);
     } else {
@@ -65,6 +78,8 @@ function randomNum() {{
 function playRound() {
 // Make the player choice case insensitive (ROCk, rOcK, rocK, etc)
     checkGame()
+    updateScore();
+
 
     computerSelection = computerPlay();
     console.log(computerSelection);
@@ -94,6 +109,7 @@ function playRound() {
         console.log("Your input is invalid");
     }   
 }
+    
 /* 
 function playGame() {
     
@@ -113,7 +129,7 @@ function askIfPlay () {
     }
 
 }
-askIfPlay();
+// askIfPlay();
 
 document.getElementById('rock-btn').addEventListener("click", function() {
     playerSelection = 'rock';
@@ -128,15 +144,3 @@ document.getElementById('scissors-btn').addEventListener("click", function() {
     playRound();
 });
 
-
-
-/* Plays 5 rounds
-playRound((prompt("Choose rock, paper, or scissors", "")).toLowerCase(), computerPlay());
-playRound((prompt("Choose rock, paper, or scissors", "")).toLowerCase(), computerPlay());
-playRound((prompt("Choose rock, paper, or scissors", "")).toLowerCase(), computerPlay());
-playRound((prompt("Choose rock, paper, or scissors", "")).toLowerCase(), computerPlay());
-playRound((prompt("Choose rock, paper, or scissors", "")).toLowerCase(), computerPlay());
-
-
- 
-*/

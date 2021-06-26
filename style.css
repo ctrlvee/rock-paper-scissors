@@ -34,22 +34,22 @@ p, h4 {
     top:0px;
     width: 20%;
     min-height: 13%;
-    border-style: dotted;
+    border-top-right-radius: 20%;
+   
+    border-bottom-right-radius: 20%;
+    
     background-color: rgba(255, 255, 255, .7);
 }
 .player-title {
     grid-area: playerName;
     font-size: 1em;
     margin: auto;
-    
     position: relative;
-    border-style: dotted;
-
 }
 .winCount {
     margin: auto;
     grid-area: winCount;
-    border-style: dotted;
+   
 }
 .userChoice {
     display: flex;
@@ -57,7 +57,7 @@ p, h4 {
     margin: auto;
     
     grid-area: btn;
-    border-style: dotted;
+    
     position: absolute;
 }
 
@@ -70,36 +70,23 @@ p, h4 {
 
 }
 .dropup-content {
-    
     display: none;
     position: relative;
-   
     z-index: 1;
-    
-   
 }
 .dropup-content a {
     display: flex;
-
-    
-    
 }
 .dropup:hover .dropup-content {
     display: flex;
-    
 }
-/*.rock-icon  {
-    max-width: 4em;
-    position: relative;
-    
-}
-*/
 img {
     margin: auto;
+    margin-top:20%;
     height: auto;
     width:auto;
-    max-width:3.5em;
-    border-style: dotted;
+    max-width:4.5em;
+    
 }
 /*
 .dropup {
